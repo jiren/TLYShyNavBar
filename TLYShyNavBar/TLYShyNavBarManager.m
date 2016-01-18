@@ -389,6 +389,12 @@ static void * const kTLYShyNavBarManagerKVOContext = (void*)&kTLYShyNavBarManage
     }
 }
 
+- (void) setPullDownOffset:(CGFloat)value
+{
+    self.scrollViewController.pullDownOffset = value;
+}
+
+
 - (void)prepareForDisplay
 {
     [self cleanup];
