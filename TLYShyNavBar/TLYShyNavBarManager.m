@@ -63,6 +63,7 @@ static void * const kTLYShyNavBarManagerKVOContext = (void*)&kTLYShyNavBarManage
 
         self.expansionResistance = 200.f;
         self.contractionResistance = 0.f;
+        self.pullDownOffset = 0.0f;
 
         self.fadeBehavior = TLYShyNavBarFadeSubviews;
         self.previousYOffset = NAN;
@@ -70,6 +71,7 @@ static void * const kTLYShyNavBarManagerKVOContext = (void*)&kTLYShyNavBarManage
         /* Initialize shy controllers */
         self.statusBarController = [[TLYShyStatusBarController alloc] init];
         self.scrollViewController = [[TLYShyScrollViewController alloc] init];
+        self.scrollViewController.pullDownOffset = self.pullDownOffset;
         self.navBarController = [[TLYShyViewController alloc] init];
 
         self.extensionViewContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100.f, 0.f)];

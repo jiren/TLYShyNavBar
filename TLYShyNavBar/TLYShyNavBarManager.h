@@ -76,6 +76,10 @@
  */
 @property (nonatomic, weak) id<TLYShyNavBarManagerDelegate> delegate;
 
+/* To show refreshcontrol on pull down.
+ */
+@property (nonatomic, assign) CGFloat pullDownOffset;
+
 @end
 
 /* PROTOCOL DESCRIPTION:
